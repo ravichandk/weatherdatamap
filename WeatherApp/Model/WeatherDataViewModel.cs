@@ -17,6 +17,6 @@ namespace WeatherApp.Model
         public string Sunrise { get; set; }
 
         public string Sunset { get; set; }
-
+        public string Base { get; internal set; }
     }
 }

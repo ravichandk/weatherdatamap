@@ -13,6 +13,7 @@ namespace WeatherApp.Helpers
             var sunrise = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc).AddSeconds(weatherData.Sys.Sunrise).TimeOfDay;
             var sunset = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc).AddSeconds(weatherData.Sys.Sunset).TimeOfDay;
 
+
             return new WeatherDataViewModel
             {
                 City = weatherData.Name,
@@ -20,7 +21,8 @@ namespace WeatherApp.Helpers
                 TemperatureInCelsius = weatherData?.Main?.Temperature,
                 TemperatureInFarenheit = (weatherData?.Main?.Temperature * 1.8) + 32,
                 Sunrise = new DateTime(sunrise.Ticks).ToString("hh:mm:ss tt"),
-                Sunset = new DateTime(sunset.Ticks).ToString("hh:mm:ss tt")
+                Sunset = new DateTime(sunset.Ticks).ToString("hh:mm:ss tt"),
+                Base = weatherData.Base
             };
         }
     }
