@@ -11,9 +11,7 @@ namespace WeatherServicesTests
         {
             var city = "London";
 
-            
-
-            var weatherService = new WeatherService(new MockHttpClientService());
+            var weatherService = new WeatherService();
             var weatherData = weatherService.FetchWeatherData(city);
 
             Assert.IsNotNull(weatherData);
