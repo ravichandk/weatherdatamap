@@ -21,8 +21,8 @@ namespace WeatherApp.Helpers
                 TemperatureInCelsius = weatherData?.Main?.Temperature,
                 TemperatureInFarenheit = (weatherData?.Main?.Temperature * 1.8) + 32,
                 Sunrise = new DateTime(sunrise.Ticks).ToString("hh:mm:ss tt"),
-                Sunset = new DateTime(sunset.Ticks).ToString("hh:mm:ss tt"),
-                Base = weatherData.Base
+                Sunset = new DateTime(sunset.Ticks).ToString("hh:mm:ss tt")
+                //Base = weatherData.Base
             };
         }
     }
