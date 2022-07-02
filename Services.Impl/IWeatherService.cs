@@ -12,11 +12,6 @@ namespace Services.Impl
 
     public class WeatherService : IWeatherService
     {
-        public WeatherService(IHttpClientService httpClientService)
-        {
-
-        }
-
         public WeatherData FetchWeatherData(string city)
         {
             WeatherData weatherData = null;
