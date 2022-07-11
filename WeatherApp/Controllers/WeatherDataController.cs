@@ -20,10 +20,16 @@ namespace WeatherApp.Controllers
         [HttpGet("{city}")]
         public WeatherDataViewModel GetWeatherData(string city)
         {
-            var weatherData = _weatherService.FetchWeatherData(city);
+            //var weatherData = _weatherService.FetchWeatherData(city);
 
-            var weatherDataViewModel = WeatherDataToViewModelConverter.Convert(weatherData);
-            return weatherDataViewModel;
+            //var weatherDataViewModel = WeatherDataToViewModelConverter.Convert(weatherData);
+            //return weatherDataViewModel;
+
+            return new WeatherDataViewModel
+            {
+                City = "London",
+                OverallDescription = "London Weather"
+            };
         }
     }
 }
